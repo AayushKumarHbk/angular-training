@@ -1,0 +1,19 @@
+.mdc-list:nth-child(odd) {
+  background: rgba(32,41,47,.03);
+}
+
+.mdc-list:nth-child(even) {
+  background: transparent;
+}
+
+.mdc-list {
+  padding: 0 !important;
+}
+
+.info-left {
+  margin-left: 50px
+}
+
+.info-mid {
+  margin: 0 100px;
+}

@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <div class="flex-spacer"></div>
+  <button mat-fab
+          extended
+          color="primary"
+          class="m-r-10"
+          (click)="openCreateUserDialog()">
+    <mat-icon>add</mat-icon>
+    Create
+  </button>
+  <button mat-icon-button
+          color="primary"
+          (click)="deleteAllUsers()">
+    <mat-icon>delete_sweep</mat-icon>
+  </button>
+</mat-toolbar>
+<app-users-table></app-users-table>

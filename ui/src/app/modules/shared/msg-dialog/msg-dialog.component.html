@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content>
+    <div class="msg">{{ message }}</div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <div class="flex-spacer"></div>
+    @for (button of buttons; track button) {
+      @if (button === MsgDialogButton.NO) {
+        <button mat-fab
+                extended
+                class="m-r-10 neg-button"
+                (click)="closeDialog(button)">
+          {{ MsgDialogButton[button] }}
+        </button>
+      } @else {
+        <button mat-fab
+                extended
+                color="primary"
+                class="m-r-10"
+                (click)="closeDialog(button)">
+          {{ MsgDialogButton[button] }}
+        </button>
+      }
+    }
+  </mat-card-actions>
+</mat-card>
