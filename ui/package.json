@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-training": "node dist/angular-training-modules/server/server.mjs process.env.APP_BASE_HREF=http://localhost:4000 process.env.PORT=4001"
+    "serve:ssr:angular-training": "node dist/angular-training-modules/server/server.mjs --env-file server.env"
   },
   "private": true,
   "dependencies": {

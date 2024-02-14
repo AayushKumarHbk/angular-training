@@ -6,7 +6,7 @@ import { UserCreationDTO } from "../models/user-creation-dto.model";
 import { convertUserEventDTOs } from "../components/utils/users-utils";
 import { UserEvent } from "../models/user-event.model";
 import { UserEventDTO } from "../models/user-event-dto";
-import { APP_BASE_HREF } from "@angular/common";
+import { API_BASE_URL } from "./tokens/base-url.token";
 
 @Injectable()
 export class UsersService {
@@ -15,7 +15,7 @@ export class UsersService {
   public readonly userActionPerformed$ = this._userActionPerformed$.asObservable();
 
   constructor(
-    @Inject(APP_BASE_HREF) private baseUrl: string,
+    @Inject(API_BASE_URL) private baseUrl: string,
     private readonly httpClient: HttpClient
   ) {
   }
